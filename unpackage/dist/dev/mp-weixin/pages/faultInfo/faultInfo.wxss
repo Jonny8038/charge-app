@@ -1,0 +1,101 @@
+
+.container {
+	background: #fff;
+}
+.content {
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+}
+.gzImg {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 62rpx;
+}
+.gzImg image {
+	margin: 0 auto;
+	margin-bottom: 20rpx;
+	width: 160rpx;
+	height: 160rpx;
+}
+.gzImg text {
+	height: 32rpx;
+	font-size: 22rpx;
+	line-height: 32rpx;
+	color: #333333;
+}
+.gznum {
+	margin: 20rpx auto;
+	padding: 0 20rpx;
+	width: 702rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 26rpx;
+	color: #333;
+	background: #F4F4F3;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+}
+.gznum1{
+	display: flex;
+	justify-content: space-between;
+}
+.gznum1 view:last-child{
+	font-size: 26rpx;
+	color: #999;
+}
+.gznum1 view:last-child text{
+	margin-left: 6rpx;
+	font-size: 16rpx;
+	color: #999;
+}
+.cartop {
+	width: 100%;
+	padding: 0 24rpx;
+	display: flex;
+	justify-content: space-between;
+	height: 60rpx;
+	line-height: 60rpx;
+	background: #F4F4F3;
+	box-sizing: border-box;
+}
+.cartop text {
+	width: 50%;
+	font-size: 22rpx;
+	color: #999;
+}
+.cartop text:last-child{
+	text-align: right;
+}
+.carli {
+	padding: 20rpx 24rpx;
+	border-bottom: 2rpx solid #F4F4F3;
+}
+.carname,
+.cardata {
+	display: flex;
+	justify-content: space-between;
+}
+.carname text:last-child,
+.cardata text:last-child {
+	text-align: right;
+}
+.carname text {
+	width: 50%;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 26rpx;
+	color: #333333;
+}
+.cardata text {
+	width: 50%;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 22rpx;
+	color: #999;
+}
+.cardataho text:last-child{
+	color: #FD6361;
+}
+

@@ -1,0 +1,176 @@
+
+.container {
+	padding-bottom: 110rpx;
+}
+.isOp {
+	opacity: 0;
+}
+.noDateBlock {
+	position: absolute;
+	left: 160rpx;
+	flex: 1;
+	height: 120rpx;
+	width: 100%;
+	font-size: 26rpx;
+	color: #999;
+}
+.con {
+	padding-bottom: constant(safe-area-inset-bottom);
+	/* 兼容 iOS < 11.2 */
+	padding-bottom: env(safe-area-inset-bottom);
+	/* 兼容 iOS >= 11.2 */
+}
+.xx {
+	padding: 0 24rpx;
+	padding-bottom: 10rpx;
+	width: 100%;
+	margin-bottom: 20rpx;
+	background: #fff;
+	box-sizing: border-box;
+}
+.xx:last-child {
+	margin-bottom: 0;
+}
+.xxtit {
+	margin-top: 20rpx;
+	margin-bottom: 40rpx;
+}
+.titicon {
+	margin-right: 10rpx;
+	display: inline-block;
+	width: 10rpx;
+	height: 30rpx;
+	background: #01B537;
+	border-radius: 100rpx;
+}
+.sfz {
+	display: flex;
+	padding: 0 52rpx;
+	justify-content: space-between;
+}
+.sfztp {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.sfzimg {
+	margin-bottom: 20rpx;
+	position: relative;
+	width: 280rpx;
+	height: 160rpx;
+}
+.sfzimg image {
+	width: 280rpx;
+	height: 160rpx;
+}
+.sfzimg button[disabled] {
+    color: #fff !important;
+    background: rgba(3, 3, 3, 0.6) !important;
+    border-radius: 50%;
+}
+.uploadBtn {
+	padding: 0;
+	position: absolute;
+	top: 46rpx;
+	left: 106rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 68rpx;
+	height: 68rpx;
+	font-size: 26rpx;
+	color: #fff;
+	background: rgba(3, 3, 3, 0.6);
+	border-radius: 50%;
+}
+button::after{
+	border:0;
+}
+.sfztit {
+	font-size: 26rpx;
+	color: #999;
+}
+.form {
+	margin-top: 10rpx;
+}
+.formItem {
+	position: relative;
+	display: flex;
+	height: 120rpx;
+	line-height: 120rpx;
+	border-bottom: 2rpx solid #F5F5F5;
+}
+.formName {
+	font-size: 30rpx;
+	color: #333;
+	width: 160rpx;
+}
+.formName text {
+	margin-right: 10rpx;
+	color: #FF0000;
+}
+.formItem input {
+	flex: 1;
+	font-size: 26rpx;
+	height: 120rpx;
+}
+.uni-input{
+	font-size: 26rpx;
+	color: #333;
+}
+.formItem input::-webkit-input-placeholder {
+	font-size: 26rpx;
+	color: #999;
+}
+.formItem input::placeholder {
+	font-size: 26rpx;
+	color: #999;
+}
+.yzmBtn {
+	margin-top: 30rpx;
+	width: 180rpx !important;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 30rpx;
+	color: #01B537;
+	padding: 0;
+	border: 2rpx solid #01B537;
+	background: none;
+
+	font-weight: initial;
+}
+.formItem button[disabled] {
+	color: #01B537 !important;
+}
+.formItemtip {
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.btn {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding-top: 20rpx;
+	background: #fff;
+	padding-bottom: constant(safe-area-inset-bottom);
+	/* 兼容 iOS < 11.2 */
+	padding-bottom: env(safe-area-inset-bottom);
+	/* 兼容 iOS >= 11.2 */
+}
+.btncon {
+	margin: 0 auto;
+	width: 702rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	font-size: 30rpx;
+	color: #333333;
+	font-weight: bold;
+	text-align: center;
+	background: #F4F4F3;
+	border-radius: 10rpx;
+}
+.btnho {
+	color: #fff;
+	background: #212D43;
+}
+

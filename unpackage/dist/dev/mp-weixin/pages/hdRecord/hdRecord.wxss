@@ -1,0 +1,197 @@
+
+.content {
+	width: 750rpx;
+	overflow-y: scroll;
+}
+.lbtop {
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 24rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	background: #fff;
+}
+.lbtopItem {
+	position: relative;
+	width: 120rpx;
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+.lbtopItem text {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 30rpx;
+	width: 60rpx;
+	height: 4rpx;
+	background: #fff;
+}
+.lbtopho {
+	font-weight: bold;
+	color: #29BD5F;
+}
+.lbtopho text {
+	background: #29BD5F;
+}
+.lb {
+	margin-top: 120rpx
+}
+.li {
+	padding-bottom: 30rpx;
+	margin: 0 auto;
+	margin-top: 20rpx;
+	width: 702rpx;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 10rpx;
+}
+.litop {
+	padding: 0 20rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 120rpx;
+	color: #000000;
+	border-bottom: 2rpx solid #F4F4F3;
+}
+.litople {
+	display: flex;
+	flex-direction: column;
+}
+.litople text:first-child {
+	margin-bottom: 8rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.litople text:last-child {
+	height: 32rpx;
+	line-height: 32rpx;
+	font-size: 22rpx;
+}
+.litopri {
+	padding: 0 13rpx;
+	width: 120rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	font-size: 26rpx;
+	text-align: center;
+	border: 2rpx solid #333333;
+	border-radius: 100rpx;
+}
+.litopho {
+	color: #fff;
+	background: #29BD5F;
+	border-radius: 10rpx 10rpx 0px 0px;
+}
+.litopho .litopri {
+	border: 2rpx solid #fff;
+}
+.licon {
+	padding: 0 20rpx;
+}
+.itemlist {
+	margin: 20rpx 0;
+}
+.liitem {
+	height: 56rpx;
+	line-height: 56rpx;
+	font-size: 26rpx;
+	color: #333;
+}
+.liitemtel {
+	display: flex;
+	justify-content: space-between;
+}
+.liitemtel .iconfont {
+	color: #212D43;
+}
+.liitempay text{
+	color:#FD6361;
+}
+.lidt {
+	display: flex;
+	padding: 0 20rpx;
+	width: 662rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	background: #F4F4F3;
+	box-sizing: border-box;
+}
+.lidt image {
+	margin-right: 20rpx;
+	width: 60rpx;
+	height: 60rpx;
+}
+.lidt text {
+	font-size: 26rpx;
+	color: #666666;
+}
+.libot {
+	padding: 0 20rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 140rpx;
+	line-height: 140rpx;
+}
+.litime {
+	font-size: 26rpx;
+	color: #333;
+}
+.litime text {
+	color: #FD6361;
+}
+.liqx {
+	font-size: 26rpx;
+	color: #999999;
+}
+.liqw {
+	width: 146rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 26rpx;
+	color: #fff;
+	text-align: center;
+	background: #29BD5F;
+	border-radius: 10rpx;
+}
+.libot1 {
+	display: flex;
+	justify-content: flex-end;
+}
+.libot2 .litime text {
+	color: #999999;
+}
+.loading {
+	padding: 20rpx 0;
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+.loading1 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+.wsjcon {
+	display: flex;
+	flex-direction: column;
+}
+.wsjcon image {
+	margin-bottom: 40rpx;
+	width: 536rpx;
+	height: 170rpx;
+}
+.wsjcon text {
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+

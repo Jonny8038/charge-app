@@ -1,0 +1,57 @@
+
+.container {
+	background: #fff;
+}
+.content {
+	width: 100%;
+	padding: 0 24rpx;
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+.tit {
+	margin-top: 20rpx;
+	margin-bottom: 30rpx;
+	line-height: 48rpx;
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #000000;
+}
+.zxlibot {
+	margin-bottom: 40rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.zxlibotho{
+	justify-content: flex-end;
+}
+.zxname {
+	width: 55%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+}
+.zxtime {
+	width: 40%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+	text-align: right;
+}
+.img {
+	margin-bottom: 40rpx;
+	width: 702rpx;
+	height: 294rpx;
+}
+.img image {
+	width: 100%;
+	height: 100%;
+}
+.xqcon {
+	font-size: 30rpx;
+	font-weight: 400;
+	line-height: 56rpx;
+	color: #333333;
+}
+

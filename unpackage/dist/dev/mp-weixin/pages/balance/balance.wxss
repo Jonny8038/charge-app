@@ -1,0 +1,139 @@
+
+.container {
+	align-items: initial;
+	justify-content: initial;
+	background: #fff;
+}
+.top {
+	padding: 0 24rpx;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.top .icon-a-lujing448 {
+	font-size: 26rpx;
+	color: #333;
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	/* IE 9 */
+	-moz-transform: rotate(180deg);
+	/* Firefox */
+	-webkit-transform: rotate(180deg);
+	/* Safari 和 Chrome */
+	-o-transform: rotate(180deg);
+	/* Opera */
+}
+.topname {
+	font-size: 34rpx;
+	color: #333;
+}
+.topRi {
+	font-size: 30rpx;
+	color: #000;
+}
+.money {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 80rpx;
+	width: 702rpx;
+	height: 300rpx;
+	text-align: center;
+	background: linear-gradient(101deg, #212D43 0%, #283958 100%);
+	border-radius: 20rpx;
+	box-sizing: border-box;
+}
+.qdata {
+	margin-bottom: 70rpx;
+	font-size: 30rpx;
+	color: #fff;
+}
+.qdata text {
+	font-size: 60rpx;
+	font-weight: bold;
+}
+.qtip {
+	font-size: 26rpx;
+	color: #95A1B7;
+}
+.money image {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 238rpx;
+	height: 130rpx;
+	border-bottom-right-radius: 20rpx;
+}
+.cz {
+	padding: 0 24rpx;
+}
+.cztop {
+	margin: 36rpx 0;
+	display: flex;
+	justify-content: space-between;
+	height: 40rpx;
+	line-height: 40rpx;
+}
+.cztop text:first-child {
+	font-size: 34rpx;
+	color: #333;
+	font-weight: bold;
+}
+.cztop text:last-child {
+	font-size: 22rpx;
+	color: #333;
+}
+.czlist {
+	display: flex;
+	flex-wrap: wrap;
+}
+.czli {
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	width: 221rpx;
+	height: 160rpx;
+	line-height: 160rpx;
+	font-size: 26rpx;
+	color: #333;
+	text-align: center;
+	background: #F4F4F3;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+}
+.czli:nth-child(3n) {
+	margin-right: 0;
+}
+.czliho {
+	background: #DFF6E6;
+	border: 1rpx solid #29BD5F;
+}
+.czli text {
+	font-size: 34rpx;
+	font-weight: bold;
+}
+.czbot {
+	padding: 0 24rpx;
+	position: fixed;
+	bottom: 40rpx;
+}
+.cztip {
+	margin-bottom: 20rpx;
+	line-height: 44rpx;
+	font-size: 26rpx;
+	font-weight: 400;
+	color: #999999;
+}
+.cztip text {
+	color: #29BD5F;
+}
+.czbtn {
+	height: 90rpx;
+	line-height: 90rpx;
+	text-align: center;
+	font-size: 30rpx;
+	color: #fff;
+	font-weight: bold;
+	background: #212D43;
+	border-radius: 10rpx;
+}
+

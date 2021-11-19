@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/systemInfo/systemInfo",
+    "pages/server/server",
+    "pages/faultInfo/faultInfo",
+    "pages/mapSite/mapSite",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/registerUser/registerUser",
+    "pages/city/city",
+    "pages/my/my",
+    "pages/jyRecord/jyRecord",
+    "pages/carInfo/carInfo",
+    "pages/updateCar/updateCar",
+    "pages/balance/balance",
+    "pages/userInfo/userInfo",
+    "pages/yyRecord/yyRecord",
+    "pages/hdRecord/hdRecord",
+    "pages/cell/cell",
+    "pages/about/about",
+    "pages/system/system",
+    "pages/updatePassword/updatePassword",
+    "pages/fjwd/fjwd",
+    "pages/detaile/detaile",
+    "pages/itemDetaile/itemDetaile"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {}
+}

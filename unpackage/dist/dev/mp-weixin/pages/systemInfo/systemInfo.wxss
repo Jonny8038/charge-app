@@ -1,0 +1,91 @@
+
+.content {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+}
+.month {
+	padding: 0 24rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 22rpx;
+	color: #666666;
+}
+.jydata {
+	padding: 0 24rpx;
+	background: #fff;
+}
+.item {
+	padding: 30rpx 0;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2rpx solid #F4F4F3;
+}
+.item:last-child {
+	border-bottom: 0;
+}
+.itemxx {
+	margin-bottom: 20rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.xxle {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	overflow: hidden;
+}
+.xxle text:first-child {
+	margin-bottom: 10rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #333333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: initial;
+}
+.xxle text:last-child {
+	height: 36rpx;
+	line-height: 36rpx;
+	font-size: 26rpx;
+	color: #666666;
+}
+.xxri {
+	font-size: 16rpx;
+	color: #999;
+}
+.itemTime {
+	font-size: 22rpx;
+	color: #999999#m999;
+}
+.loading {
+	padding: 20rpx 0;
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+.loading1 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+.wsjcon {
+	display: flex;
+	flex-direction: column;
+}
+.wsjcon image {
+	margin-bottom: 40rpx;
+	width: 536rpx;
+	height: 170rpx;
+}
+.wsjcon text {
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+

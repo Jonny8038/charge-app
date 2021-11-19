@@ -1,0 +1,417 @@
+<template>
+	<view class="popdetaile">
+		<!-- <view class="bottk" @click="clickMb"> </view> -->
+		<view class="bot mdxx">
+			<view class="sqbtn" @click="clickMb"><text class="iconfont sqbtnico">&#xe60f;</text></view>
+			<view class="xx1">
+				<view class="xx1le">
+					<view class="wz">
+						<text v-if="dtDetaile.istype==1" class="mdstate">营业</text>
+						<text v-if="dtDetaile.istype==2" class="mdstate mdstate1">停业</text>
+						<text class="mdname" :data-id="dtDetaile.id" :data-jl="dtDetaile.distance"
+							@click="goDetaile">{{dtDetaile.name}}</text>
+					</view>
+					<view class="mdtel" v-if="dtDetaile.phone" :data-tel="dtDetaile.phone" @click="callTel">
+						<text class="iconfont">&#xe628;</text>
+						<text class="tel">站场电话：{{dtDetaile.phone}}</text>
+					</view>
+				</view>
+				<view class="xx1ri">
+					<view class="dh" v-if="dtDetaile.zx&&dtDetaile.zy" :data-lng="dtDetaile.zx"
+						:data-lat="dtDetaile.zy" :data-name="dtDetaile.name" :data-address="dtDetaile.address"
+						@click="goDh">
+						<text class="iconfont">&#xe619;</text>
+						<text class="dhname">导航</text>
+					</view>
+					<text class="jl">{{dtDetaile.distance}}</text>
+				</view>
+			</view>
+			<view class="xx2">
+				<view class="xx2top">
+					<text class="xx2tople">电池充电情况</text>
+					<view class="xx2topri">
+						<text class="dcname">电池</text>
+						<text class="dcnum">{{dcNum?dcNum:0}}</text>
+					</view>
+				</view>
+				<view class="xx2con">
+					<block v-for="(value, key, index) in powerSpaceCount" :key="index">
+						<view class="xx2item">
+							<text class="xx2itemdata">{{value}}</text>
+							<text class="xx2itemname">{{key.split('-')[0]+'%~'+key.split('-')[1]+'%'}}</text>
+						</view>
+					</block>
+				</view>
+			</view>
+			<view class="xx3"><text class="xx3name">预约须知：</text><text
+					class="xx3data">预约成功后请尽快前往站场进行换电，订单保留30分钟，超时将取消预约订单。</text></view>
+			<view class="btn" v-if="dtDetaile.istype==1" :data-id="dtDetaile.id" :data-name="dtDetaile.zname" @click="dtyyFun">
+				<text class="iconfont">&#xe61a;</text>
+				<text class="btntext">预约换电</text>
+			</view>
+			<view class="btn" :class="dtDetaile.istype==2?'btnho':''" v-if="dtDetaile.istype==2">
+				<text class="iconfont">&#xe61a;</text>
+				<text class="btntext">预约换电</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import util from '../../../utils/WSCoordinate.js'
+	export default {
+		data() {
+			return {
+				dtDetaile: {},
+				powerSpaceCount:{},
+				distance:'',
+				dcNum: 0,
+				successState: true,
+				failState: true,
+			}
+		},
+		methods: {
+			// 跳转到内容页
+			goDetaile(e) {
+				var id = e.currentTarget.dataset.id
+				uni.navigateTo({
+					url: '../../pages/detaile/detaile?id=' + id + '&jl=' + e.currentTarget.dataset.jl,
+				});
+			},
+			clickMb() {
+				const popdetaile = uni.getSubNVueById('popup_detaile');
+				popdetaile.hide();
+			},
+			// 打电话
+			callTel: function(e) {
+				var phone = e.currentTarget.dataset.tel;
+				if (phone != '') {
+					uni.makePhoneCall({
+						phoneNumber: phone,
+					})
+				}
+			},
+			// 跳转到导航
+			goDh: function(e) {
+				const popdetaile = uni.getSubNVueById('popup_detaile');
+				popdetaile.hide();
+				this.showState = true;
+				this.successState = true;
+				var bdzhx = util.transformFromBaiduToGCJ(e.currentTarget.dataset.lat, e.currentTarget.dataset.lng);
+				uni.openLocation({
+					latitude: bdzhx.latitude, //维度
+					longitude: bdzhx.longitude, //经度
+					name: e.currentTarget.dataset.name, //目的地定位名称
+					scale: 15, //缩放比例
+					address: e.currentTarget.dataset.address //导航详细地址
+				});
+			},
+			// 地图详情预约
+			dtyyFun: function(e) {
+				this.yyreserv(e.currentTarget.dataset.id);
+			},
+			yyreserv: function(id) {
+				var that = this
+				var token = uni.getStorageSync('token') || '';
+				uni.request({
+					url: getApp().globalData.baseUrl + '/appreserv/create',
+					data: {
+						siteId: id,
+					},
+					method: 'POST',
+					header: {
+						'Content-Type': 'application/x-www-form-urlencoded',
+						'Accept': 'application/json, text/javascript, */*; q=0.01',
+						'Authorization': token
+					},
+					success(res) {
+						if (res.data.code == 200) {
+							if(res.data.msg=="操作成功"){
+								const poptk = uni.getSubNVueById('popup_tk');
+								poptk.show();
+								//页面之间传值
+								uni.$emit('popTk', { //yysta==0预约成功
+									dtDetaile: that.dtDetaile,
+									yysta: 0,
+								});
+							}else{
+								const poptk = uni.getSubNVueById('popup_tk');
+								poptk.show();
+								//页面之间传值
+								uni.$emit('popTk', { //yysta==1预约失败
+									dtDetaile: that.dtDetaile,
+									yysta: 1,
+								});
+							}
+						}else {
+							uni.showToast({
+								icon: 'none',
+								title: res.data.msg,
+								duration: 3000
+							})
+						}
+						
+					},
+					fail(err) {
+						uni.showToast({
+							icon: 'none',
+							title: "网络错误",
+						})
+					}
+				})
+			},
+		},
+		onShow() {
+			uni.$on('popDetaile', (res) => {
+				console.log('resres', res)
+				this.dtDetaile = res.dtDetaile;
+				this.dcNum = res.dcNum;
+				this.powerSpaceCount=res.powerSpaceCount
+			});
+		},
+		onUnload() {
+			uni.$off('popDetaile');
+		},
+		created() {
+			const domModule = weex.requireModule('dom');
+			domModule.addRule('fontFace', {
+				fontFamily: 'iconfont',
+				src: "url('../../../static/iconfont/iconfont.ttf')"
+			});
+			// 这里需要引入你的 iconfont 项目的 ttf 文件
+		}
+	}
+</script>
+
+<style scoped>
+	.iconfont {
+		font-family: iconfont;
+	}
+
+	.bottk {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	.bot {
+		width: 750rpx;
+	}
+
+	.mdxx {
+		padding: 0 24rpx;
+		padding-bottom: 40rpx;
+	}
+
+	.sqbtn {
+		display: flex;
+		justify-content: center;
+		width: 750rpx;
+	}
+
+	.sqbtnico {
+		height: 56rpx;
+		line-height: 56rpx;
+		font-size: 20rpx;
+		color: #EAEAEA;
+		text-align: center;
+	}
+
+	.xx1 {
+		flex-direction: row;
+		justify-content: space-between;
+
+	}
+
+	.wz {
+		margin-bottom: 10rpx;
+		flex-direction: row;
+		align-items: center;
+		height: 50rpx;
+	}
+
+	.mdstate {
+		width: 60rpx;
+		height: 30rpx;
+		line-height: 30rpx;
+		font-size: 20rpx;
+		color: #fff;
+		text-align: center;
+		background: #29BD5F;
+		border-radius: 10rpx;
+	}
+
+	.mdstate1 {
+		background: #999999;
+	}
+
+	.mdname {
+		margin-left: 10rpx;
+		width: 380rpx;
+		height: 50rpx;
+		line-height: 50rpx;
+		font-size: 30rpx;
+		color: #333;
+		overflow: hidden;
+	}
+
+	.mdtel {
+		flex-direction: row;
+	}
+
+	.mdtel .iconfont {
+		margin-right: 10rpx;
+		font-size: 32rpx;
+	}
+
+	.tel {
+		font-size: 26rpx;
+		color: #999;
+	}
+
+	.dh {
+		margin-bottom: 10rpx;
+		flex-direction: row;
+		justify-content: center;
+		width: 130rpx;
+		height: 50rpx;
+		line-height: 50rpx;
+		background: #FAFCFF;
+		border: 2rpx solid #66676A;
+		border-radius: 24rpx;
+	}
+
+	.dh .iconfont {
+		margin-right: 10rpx;
+		line-height: 50rpx;
+		font-size: 30rpx;
+	}
+
+	.dhname {
+		line-height: 50rpx;
+		font-size: 26rpx;
+		color: #212D43;
+	}
+
+	.jl {
+		font-size: 26rpx;
+		color: #999;
+		text-align: right;
+	}
+
+	.xx2 {
+		margin-top: 24rpx;
+		padding: 0 20rpx;
+		width: 702rpx;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 20rpx rgba(0, 0, 0, 0.05);
+		border-radius: 10rpx;
+	}
+
+	.xx2top {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 100rpx;
+		line-height: 100rpx;
+	}
+
+	.xx2tople {
+		height: 100rpx;
+		line-height: 100rpx;
+		font-size: 26rpx;
+		color: #333;
+		font-weight: bold;
+	}
+
+	.xx2topri {
+		flex-direction: row;
+		height: 100rpx;
+		align-items: center;
+	}
+
+	.dcname {
+		margin-right: 10rpx;
+		font-size: 26rpx;
+		color: #999;
+	}
+
+	.dcnum {
+		color: #FF1D1D;
+		font-weight: bold;
+	}
+
+	.xx2con {
+		padding: 30rpx 0;
+		border-top: 2rpx solid #F2F5F8;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.xx2item {
+		flex-direction: column;
+
+	}
+
+	.xx2itemdata {
+		margin-bottom: 20rpx;
+		height: 44rpx;
+		font-size: 34rpx;
+		font-weight: bold;
+		line-height: 40rpx;
+		color: #333333;
+		text-align: center;
+	}
+
+	.xx2itemname {
+		height: 34rpx;
+		font-size: 26rpx;
+		line-height: 40rpx;
+		color: #999999;
+		text-align: center;
+	}
+
+	.xx3 {
+		margin: 40rpx 0;
+	}
+
+	.xx3name {
+		line-height: 52rpx;
+		font-size: 26rpx;
+		color: #333333;
+		font-weight: bold;
+	}
+
+	.xx3data {
+		line-height: 52rpx;
+		font-size: 26rpx;
+		color: #333333;
+	}
+
+	.btn {
+		flex-direction: row;
+		justify-content: center;
+		width: 702rpx;
+		background: #212D43;
+		border-radius: 10rpx;
+		text-align: center;
+	}
+	.btnho {
+		background: #F4F4F3;
+	}
+	.btn .iconfont {
+		height: 90rpx;
+		line-height: 90rpx;
+		margin-right: 10rpx;
+		color: #FAFCFF;
+	}
+
+	.btntext {
+		height: 90rpx;
+		line-height: 90rpx;
+		font-size: 26rpx;
+		color: #FAFCFF;
+	}
+</style>

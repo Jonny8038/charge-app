@@ -1,0 +1,1 @@
+<view class="container"><video src="{{videoUrl}}" autoplay="true"></video></view>

@@ -1,0 +1,151 @@
+
+.container {
+	padding-bottom: 98rpx;
+}
+.content {
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+}
+.videosp {
+	position: fixed;
+	width: 0rpx;
+	height: 0rpx;
+	left: 0;
+	display: none;
+}
+.videospho {
+	display: flex;
+}
+.yy {
+	padding: 0 24rpx;
+}
+.fwitem {
+	margin-top: 20rpx;
+	padding: 20rpx;
+	display: flex;
+	justify-content: space-between;
+	width: 702rpx;
+	height: 240rpx;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 12rpx rgba(0, 0, 0, 0.06);
+	border-radius: 10rpx;
+	box-sizing: border-box;
+}
+.itemle {
+	display: flex;
+}
+.img {
+	margin-right: 20rpx;
+	width: 200rpx;
+	height: 200rpx;
+}
+.img image {
+	width: 200rpx;
+	height: 200rpx;
+}
+.lecon {
+	display: flex;
+	flex-direction: column;
+}
+.lecon text:nth-child(1) {
+	margin-top: 52rpx;
+	margin-bottom: 20rpx;
+}
+.itemri {
+	margin-top: 70rpx;
+	width: 128rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 26rpx;
+	color: #A35EF4;
+	text-align: center;
+	border: 2rpx solid #A35EF4;
+	border-radius: 60rpx;
+}
+.fwitem:nth-child(2) .itemri {
+	color: #F9713D;
+	border: 2rpx solid #F9713D;
+}
+.fwitem:nth-child(3) .itemri {
+	color: #FF5C83;
+	border: 2rpx solid #FF5C83;
+}
+.sp {
+	margin: 20rpx 0;
+	padding: 30rpx 24rpx;
+	background: #fff;
+}
+.sptop {
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 34rpx;
+	color: #333;
+	font-weight: bold;
+}
+.splist {
+	display: flex;
+	flex-wrap: wrap;
+}
+.spli {
+	margin-top: 20rpx;
+	width: 341rpx;
+}
+.spli:nth-child(2n) {
+	margin-left: 20rpx;
+}
+.spdh {
+	position: relative;
+	width: 341rpx;
+	height: 196rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+.spdh image {
+	width: 100%;
+	height: 100%;
+}
+.bf {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 341rpx;
+	height: 196rpx;
+	background: rgba(0, 0, 0, 0.2);
+}
+.bf image {
+	width: 81rpx;
+	height: 81rpx;
+}
+.splitit {
+	margin-top: 20rpx;
+	margin-bottom: 4rpx;
+	width: 100%;
+	height: 40rpx;
+	line-height: 40rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #333333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.splidesc {
+	width: 100%;
+	height: 36rpx;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999999;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.splist1{
+	justify-content: center;
+	font-size: 30rpx;
+	color: #666;
+}
+

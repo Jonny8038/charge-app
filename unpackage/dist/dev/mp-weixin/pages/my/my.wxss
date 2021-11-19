@@ -1,0 +1,158 @@
+
+.container {
+	padding-bottom: 98rpx;
+	background: #fff;
+}
+.content {
+	overflow-y: scroll;
+}
+.grxx {
+	padding-top: 20rpx;
+	padding-bottom: 40rpx;
+	display: flex;
+	justify-content: space-between;
+	background: #212D43;
+}
+.xxle {
+	padding-left: 24rpx;
+	display: flex;
+}
+.xximg {
+	margin-right: 20rpx;
+	width: 110rpx;
+	height: 110rpx;
+	border-radius: 50%;
+}
+.xximg image {
+	width: 110rpx;
+	height: 110rpx;
+	border-radius: 50%;
+}
+.xxcon {
+	display: flex;
+	flex-direction: column;
+}
+.xxname {
+	margin-top: 12rpx;
+	margin-bottom: 10rpx;
+	font-size: 34rpx;
+	color: #fff;
+}
+.xxtel {
+	font-size: 26rpx;
+	color: #637AA5;
+}
+.xxri {
+	margin-top: 6rpx;
+	width: 160rpx;
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size: 24rpx;
+	color: #fff;
+	text-align: center;
+	background: #2E4265;
+	border-radius: 60rpx 0px 0px 60rpx;
+}
+.xxri .iconfont {
+	font-size: 18rpx;
+}
+.zhxx {
+	background: #212D43;
+}
+.zhcon {
+	display: flex;
+	justify-content: space-around;
+	padding: 58rpx 24rpx;
+	width: 750rpx;
+	background: #FFFFFF;
+	border-radius: 40rpx 40rpx 0px 0px;
+	box-sizing: border-box;
+}
+.zhitem {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.zhitem text:first-child {
+	margin-bottom: 28rpx;
+	height: 52rpx;
+	font-size: 40rpx;
+	font-weight: bold;
+	line-height: 52rpx;
+	color: #333333;
+}
+.zhitem text:last-child {
+	height: 36rpx;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #000000;
+}
+.gntop {
+	padding: 0 24rpx;
+	height: 126rpx;
+	line-height: 126rpx;
+	font-size: 34rpx;
+	color: #000;
+	font-weight: bold;
+	border-top: 2rpx solid #F2F5F8;
+}
+.gnitem {
+	padding: 0 24rpx;
+	display: flex;
+	justify-content: space-between;
+	height: 126rpx;
+	line-height: 126rpx;
+}
+.itemle {
+	display: flex;
+	font-size: 30rpx;
+	color: #000;
+}
+.itemle image {
+	margin-right: 20rpx;
+	width: 40rpx;
+	height: 46rpx;
+}
+.itemle button {
+	padding: 0;
+	background: none;
+	height: 126rpx;
+	line-height: 126rpx;
+	font-size: 30rpx;
+	color: #000000;
+}
+.itemle button::after{
+	border:0;
+}
+.img {
+	display: flex;
+	align-items: center;
+}
+.gnitem image {
+	width: 40rpx;
+	height: 40rpx;
+}
+.gnitem:nth-child(3) image {
+	width: 40rpx;
+	height: 35rpx;
+}
+.gnitem:nth-child(5) image {
+	width: 40rpx;
+	height: 37rpx;
+}
+.itemri {
+	font-size: 26rpx;
+	color: #999999;
+}
+.closebtn {
+	margin: 40rpx auto;
+	width: 702rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	font-size: 30rpx;
+	color: #212D43;
+	text-align: center;
+	background: #E4EDF5;
+	border-radius: 10rpx;
+}
+

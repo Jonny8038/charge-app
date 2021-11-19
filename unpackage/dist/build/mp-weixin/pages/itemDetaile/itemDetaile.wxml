@@ -1,0 +1,1 @@
+<view class="container"><view class="content"><view class="tit">{{detailes.title}}</view><view class="zxlibot"><view class="zxname">{{detailes.siteName}}</view><view class="zxtime">{{detailes.createTime}}</view></view><view class="xqcontent"><view class="xqcon">{{detailes.content+''}}</view></view></view></view>

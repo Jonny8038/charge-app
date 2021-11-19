@@ -1,0 +1,391 @@
+
+.container{
+}
+.ComBox {
+	padding-bottom: constant(safe-area-inset-bottom);
+	/* 兼容 iOS < 11.2 */
+	padding-bottom: env(safe-area-inset-bottom);
+	/* 兼容 iOS >= 11.2 */
+	height: auto;
+	position: relative;
+}
+.box {
+	height: 200rpx;
+	background: #f7f7f7;
+	border: 1rpx solid skyblue;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 200rpx;
+}
+.lbtop {
+	/* position: fixed; */
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	padding: 0 24rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	/* top: 0; // 这个试了也可以达到吸顶效果 */
+	z-index: 111;
+	background: #F4F4F3;
+}
+.istab {
+	width: 100%;
+	padding: 0 24rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	text-align: center;
+	z-index: 999;
+	top: 0;
+	display: flex;
+	background: #F4F4F3;
+	box-sizing: border-box;
+}
+.item {
+	position: relative;
+	width: 120rpx;
+	font-size: 30rpx;
+	color: #333;
+	text-align: center;
+}
+.item:first-child {
+	margin-right: 40rpx;
+}
+.item text {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 120rpx;
+	height: 4rpx;
+	background: #fff;
+}
+.somitem {
+	font-weight: bold;
+	color: #000;
+}
+.somitem text {
+	background: #000;
+}
+.banner {
+	width: 100%;
+	height: 360rpx;
+}
+.banner image {
+	width: 100%;
+	height: 100%;
+}
+.nrtop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 24rpx;
+	height: 156rpx;
+	line-height: 156rpx;
+	background: #fff;
+}
+.tople {
+	display: flex;
+	width: 534rpx;
+	padding-right: 10rpx;
+	height: 156rpx;
+	overflow: hidden;
+}
+.icon-a-zujian93 {
+	margin-right: 10rpx;
+	font-size: 30rpx;
+	color: #666;
+}
+.tophx {
+	width: 2rpx;
+	height: 75rpx;
+	background: #F4F4F3;
+}
+.topri {
+	width: 150rpx;
+	text-align: right;
+	height: 156rpx;
+	overflow: hidden;
+}
+.dl {
+	margin: 0 auto;
+	padding: 0 22rpx;
+	padding-top: 40rpx;
+	background: #fff;
+}
+.dccon {
+	padding-bottom: 40rpx;
+	width: 702rpx;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+	background: #FAFCFF;
+}
+.dltop {
+	padding: 0 22rpx;
+	display: flex;
+	justify-content: space-between;
+	height: 110rpx;
+	line-height: 110rpx;
+	border-bottom: 2rpx solid #F2F5F8;
+}
+.dlri text {
+	margin-left: 10rpx;
+	font-size: 38rpx;
+	color: #FF1D1D;
+}
+.dlcon {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 250rpx;
+	overflow-y: scroll;
+}
+.dlli {
+	display: flex;
+	margin-top: 40rpx;
+	margin-right: 20rpx;
+}
+.dlli:nth-child(4n+4) {
+	margin-right: 0;
+}
+.dlnum {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	margin-top: 12rpx;
+	width: 34rpx;
+	height: 73rpx;
+	line-height: 73rpx;
+	text-align: center;
+	background: #EAEAEA;
+	border-radius: 10rpx 0px 0px 10rpx;
+}
+.dlnum text {
+	width: 100%;
+	z-index: 3;
+}
+.dlbg {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+}
+.dlbg1 {
+	background: linear-gradient(180deg, #29BD5F 0%, #14AC4B 100%);
+	border-radius: 10rpx 0 0 10rpx;
+}
+.dlbg2 {
+	background: #212D43;
+	border-radius: 10rpx 0 0 10rpx;
+}
+.dlnr {
+	display: flex;
+	flex-direction: column;
+	width: 114rpx;
+	height: 85rpx;
+	padding-top: 8rpx;
+	box-sizing: border-box;
+	background: #FFFFFF;
+	border: 2rpx solid #212D43;
+	border-radius: 10rpx;
+	border-bottom-left-radius: 0;
+	text-align: center;
+}
+.dldata {
+	font-size: 22rpx;
+	color: #3E3E3E;
+}
+.dlnr1 {
+	background: #F4F4F3;
+	border: 0;
+}
+.dlnr1 .dldata {
+	color: #999;
+}
+.dlbot {
+	position: fixed;
+	bottom: 0;
+	padding: 20rpx 24rpx;
+	width: 100%;
+	background: #fff;
+	box-sizing: border-box;
+}
+.dlbotcon {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: constant(safe-area-inset-bottom);
+	/* 兼容 iOS < 11.2 */
+	padding-bottom: env(safe-area-inset-bottom);
+	/* 兼容 iOS >= 11.2 */
+}
+.dlbtn {
+	width: 260rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 100rpx;
+	text-align: center;
+}
+.lxbtn {
+	font-size: 30rpx;
+	color: #474747;
+	border: 2rpx solid #999999;
+}
+.yybtn {
+	font-size: 30rpx;
+	color: #fff;
+	background: #29BD5F;
+}
+.yybtnho{
+	background: #F4F4F3;
+}
+.dlbtn .iconfont {
+	margin-right: 10rpx;
+}
+.yytk {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.4);
+}
+.tk {
+	position: relative;
+	width: 582rpx;
+	height: 400rpx;
+	background: #FFFFFF;
+	border: 6rpx solid rgba(112, 213, 142, 0.2196078431372549);
+	box-shadow: 0px 0px 20rpx rgba(0, 0, 0, 0.26);
+	border-radius: 40rpx;
+}
+.tk .img {
+	position: absolute;
+	left: 232rpx;
+	top: -59rpx;
+	height: 118rpx;
+	width: 118rpx;
+}
+.tk image {
+	height: 118rpx;
+	width: 118rpx;
+}
+.tknr {
+	margin-top: 108rpx;
+	text-align: center;
+}
+.tip1 {
+	margin: 0 auto;
+	margin-bottom: 20rpx;
+	width: 320rpx;
+	line-height: 40rpx;
+}
+.icon-a-lujing415 {
+	margin-top: 40rpx;
+	font-size: 64rpx;
+	text-align: center;
+}
+.sbtknr {
+	border: 6px solid #EAEAEA;
+}
+.tip3 {
+	margin: 0 auto;
+	margin-top: 40rpx;
+	width: 400rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	background: #F2F5F8;
+	border-radius: 10rpx;
+}
+.tip4{
+	margin: 0 auto;
+	margin-top: 40rpx;
+	width: 400rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #fff;
+	background: #212D43;
+	border-radius: 10rpx;
+}
+/* 资讯 */
+.zx {
+	margin: 20rpx 0;
+	padding: 24rpx;
+	padding-bottom: 100rpx;
+	background: #fff;
+}
+.zxtit {
+	margin-bottom: 34rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 30rpx;
+	color: #000000;
+	font-weight: bold;
+}
+.zxli {
+	margin-bottom: 40rpx;
+	display: flex;
+}
+.zxli:last-child {
+	margin-bottom: 0;
+}
+.zxImg {
+	width: 200rpx;
+	height: 200rpx;
+}
+.zxImg image {
+	width: 100%;
+	height: 100%;
+	border-radius: 10rpx;
+}
+.zxRi {
+	margin-left: 20rpx;
+	width: 482rpx;
+}
+.zxlitit {
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 30rpx;
+	color: #000;
+}
+.zxlidesc {
+	margin-bottom: 16rpx;
+	height: 80rpx;
+	font-size: 26rpx;
+	line-height: 44rpx;
+	color: #666666;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.zxlibot {
+	display: flex;
+	justify-content: space-between;
+}
+.zxname {
+	width: 55%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+}
+.zxtime {
+	width: 40%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+	text-align: right;
+}
+

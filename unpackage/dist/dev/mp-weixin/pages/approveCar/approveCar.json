@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "车辆认证",
+  "usingComponents": {
+    "cpimg": "/components/cpimg/cpimg"
+  }
+}

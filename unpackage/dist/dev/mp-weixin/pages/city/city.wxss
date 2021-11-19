@@ -1,0 +1,109 @@
+
+.top {
+	top: 0;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	background: #fff;
+}
+.ss {
+	padding-bottom: 20rpx;
+	width: 100%;
+}
+.sscon {
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	width: 702rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	background: #F5F5F5;
+}
+.ssico {
+	margin: 0 20rpx;
+	font-size: 26rpx;
+	color: #666;
+}
+.sscon input {
+	flex: 1;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 26rpx;
+	color: #000;
+}
+.pyclass {
+	font-size: 26rpx;
+	color: #999;
+}
+.cs {
+	padding: 0 24rpx;
+}
+.cstop {
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 22rpx;
+	color: #999;
+}
+.csdata1 {
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.icon-a-lujing453 {
+	font-size: 26rpx;
+	color: #29BD5F;
+}
+.csdata2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+.item {
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	width: 161rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 26rpx;
+	color: #000;
+	text-align: center;
+	border: 2rpx solid #F2F5F8;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+}
+.item:nth-child(4) {
+	margin-right: 0;
+}
+.a-z {
+	width: 35rpx;
+	position: fixed;
+	z-index: 1;
+	text-align: center;
+	right: 22rpx;
+}
+.a-z view {
+	line-height: 38rpx;
+	font-size: 28rpx;
+	color: #999999;
+}
+.azho {
+	color: #000 !important;
+}
+.city-item-content {
+	padding: 0 24rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.city-item {
+	height: 78rpx;
+	line-height: 78rpx;
+	font-size: 26rpx;
+	color: #000;
+	border-bottom: 1rpx solid #F2F5F8;
+}
+.city-item-A-Z {
+	height: 78rpx;
+	line-height: 78rpx;
+	font-size: 26rpx;
+	color: #000;
+}
+

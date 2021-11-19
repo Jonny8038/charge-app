@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更换车辆",
+  "usingComponents": {
+    "cpimg": "/components/cpimg/cpimg"
+  }
+}

@@ -1,0 +1,90 @@
+
+.content {
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+}
+.month {
+	padding: 0 24rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 22rpx;
+	color: #666666;
+}
+.jydata {
+	padding: 0 24rpx;
+	background: #fff;
+}
+.item {
+	padding: 30rpx 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2rpx solid #F4F4F3;
+}
+.item:last-child {
+	border-bottom: 0;
+}
+.itemle {
+	display: flex;
+	flex-direction: column;
+}
+.itemri {
+	display: flex;
+	flex-direction: column;
+}
+.item text {
+	height: 40rpx;
+	line-height: 40rpx;
+}
+.itemle text:first-child {
+	margin-bottom: 10rpx;
+	font-size: 30rpx;
+	color: #333333;
+}
+.itemle text:last-child {
+	font-size: 22rpx;
+	color: #999999;
+}
+.itemri text {
+	text-align: right;
+}
+.itemri text:first-child {
+	margin-bottom: 10rpx;
+	font-size: 30rpx;
+	color: #333333;
+	font-weight: bold;
+}
+.itemri text:last-child {
+	font-size: 22rpx;
+	color: #999999;
+}
+.addMoney {
+	color: #FD6361 !important;
+}
+.loading {
+	padding: 20rpx 0;
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+.loading1 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+.wsjcon {
+	display: flex;
+	flex-direction: column;
+}
+.wsjcon image {
+	margin-bottom: 40rpx;
+	width: 536rpx;
+	height: 170rpx;
+}
+.wsjcon text {
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+

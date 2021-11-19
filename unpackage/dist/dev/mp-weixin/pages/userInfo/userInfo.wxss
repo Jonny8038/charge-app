@@ -1,0 +1,70 @@
+
+.container {
+	background: #fff;
+}
+.xx {
+	width: 750rpx;
+}
+.tx {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 26rpx;
+	color: #333;
+}
+.tximg {
+	margin: 0 auto;
+	margin-bottom: 10rpx;
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border: 1rpx solid #ccc;
+}
+.tximg image {
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+}
+.xxcon {
+	padding: 0 24rpx;
+}
+.xxitem {
+	display: flex;
+	justify-content: space-between;
+	height: 120rpx;
+	line-height: 120rpx;
+}
+.xxri {
+	display: flex;
+}
+.xxri input {
+	height: 120rpx;
+	line-height: 120rpx;
+	text-align: right;
+	font-size: 26rpx;
+	color: #999999;
+}
+.xxri .iconfont {
+	margin-left: 10rpx;
+	font-size: 26rpx;
+	color: #999999;
+}
+.picker {
+	font-size: 26rpx;
+	color: #999;
+}
+.dbtn {
+	padding: 0;
+	margin: 0 auto;
+	margin-top: 200rpx;
+	width: 702rpx !important;
+	height: 90rpx;
+	line-height: 90rpx;
+	font-size: 30rpx;
+	color: #fff !important;
+	font-weight: bold;
+	text-align: center;
+	background: #212D43;
+	border-radius: 10rpx;
+}
+

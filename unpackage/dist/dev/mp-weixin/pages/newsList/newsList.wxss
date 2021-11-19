@@ -1,0 +1,90 @@
+
+.container{
+}
+.zxlist{
+	width: 100%;
+}
+.zxli {
+	padding: 20rpx;
+	margin-top: 20rpx;
+	display: flex;
+	background: #fff;
+}
+.zxImg {
+	width: 200rpx;
+	height: 200rpx;
+}
+.zxImg image {
+	width: 100%;
+	height: 100%;
+	border-radius: 10rpx;
+}
+.zxRi {
+	margin-left: 20rpx;
+	width: 482rpx;
+}
+.zxlitit {
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	font-size: 30rpx;
+	color: #000;
+}
+.zxlidesc {
+	margin-bottom: 16rpx;
+	height: 80rpx;
+	font-size: 26rpx;
+	line-height: 44rpx;
+	color: #666666;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.zxlibot {
+	display: flex;
+	justify-content: flex-end;
+}
+.zxname {
+	width: 55%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+}
+.zxtime {
+	width: 40%;
+	height: 32rpx;
+	font-size: 22rpx;
+	color: #999;
+	overflow: hidden;
+	text-align: right;
+}
+.loading {
+	padding: 20rpx 0;
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+.loading1 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+.wsjcon {
+	display: flex;
+	flex-direction: column;
+}
+.wsjcon image {
+	margin-bottom: 40rpx;
+	width: 536rpx;
+	height: 170rpx;
+}
+.wsjcon text {
+	font-size: 30rpx;
+	color: #666;
+	text-align: center;
+}
+

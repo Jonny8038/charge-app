@@ -1,0 +1,198 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "换电"
+			}
+		},{
+			"path": "pages/newsList/newsList",
+			"style": {
+				"navigationBarTitleText": "新闻资讯"
+			}
+		}, {
+			"path": "pages/systemInfo/systemInfo",
+			"style": {
+				"navigationBarTitleText": "系统消息"
+			}
+		}, {
+			"path": "pages/server/server",
+			"style": {
+				"navigationBarTitleText": "服务"
+			}
+		}, {
+			"path": "pages/videoplay/videoplay",
+			"style": {
+				"navigationBarTitleText": "播放视频"
+			}
+		},{
+			"path": "pages/faultInfo/faultInfo",
+			"style": {
+				"navigationBarTitleText": "故障信息"
+			}
+		}, {
+			"path": "pages/mapSite/mapSite",
+			"style": {
+				"navigationBarTitleText": "地图站点",
+				"subNVues": [{
+					"id":"popup_detaile",
+					"path":"pages/mapSite/subNVue/popDetaile",
+					"type":"popup",
+					"style": {
+						"position":"absolute",
+						"left":"0",
+						"right":"0",
+						"bottom":"0",
+						"zindex":2,
+						"width":"750rpx",
+						"height":"788rpx"
+					}
+				},
+				{
+					"id":"popup_tk",
+					"path":"pages/mapSite/subNVue/popTk",
+					"type":"popup",
+					"style": {
+						"position":"absolute",
+						"right":"0",
+						"bottom":"0",
+						"width":"100%",
+						"height":"100%",
+						"zindex":3,
+						"background":"rgba(0,0,0,0.5)"
+					}
+				}]
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/registerUser/registerUser",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},{
+			"path": "pages/approveCar/approveCar",
+			"style": {
+				"navigationBarTitleText": "车辆认证"
+			}
+		},{
+			"path": "pages/approveUser/approveUser",
+			"style": {
+				"navigationBarTitleText": "用户认证"
+			}
+		}, {
+			"path": "pages/city/city",
+			"style": {
+				"navigationBarTitleText": "选择城市"
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarBackgroundColor": "#212D43",
+				"navigationBarTitleText": "我的",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/jyRecord/jyRecord",
+			"style": {
+				"navigationBarTitleText": "账单"
+			}
+		}, {
+			"path": "pages/carInfo/carInfo",
+			"style": {
+				"navigationBarTitleText": "车辆详情"
+			}
+		}, {
+			"path": "pages/updateCar/updateCar",
+			"style": {
+				"navigationBarTitleText": "更换车辆"
+			}
+		}, {
+			"path": "pages/balance/balance",
+			"style": {
+				"navigationBarTitleText": "我的余额",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/userInfo/userInfo",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		}, {
+			"path": "pages/yyRecord/yyRecord",
+			"style": {
+				"navigationBarTitleText": "预约记录"
+			}
+		}, {
+			"path": "pages/hdRecord/hdRecord",
+			"style": {
+				"navigationBarTitleText": "换电记录"
+			}
+		}, {
+			"path": "pages/cell/cell",
+			"style": {
+				"navigationBarTitleText": "我的电池"
+			}
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/system/system",
+			"style": {
+				"navigationBarTitleText": "系统设置"
+			}
+		}, {
+			"path": "pages/updatePassword/updatePassword",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}, {
+			"path": "pages/fjwd/fjwd",
+			"style": {
+				"navigationBarTitleText": "服务网点"
+			}
+		}, {
+			"path": "pages/detaile/detaile",
+			"style": {
+				"navigationBarTitleText": "站内详情"
+			}
+		}, {
+			"path": "pages/itemDetaile/itemDetaile",
+			"style": {
+				"navigationBarTitleText": "站内资讯"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
